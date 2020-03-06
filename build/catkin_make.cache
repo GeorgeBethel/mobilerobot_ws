@@ -1,0 +1,2 @@
+mobile_robot_description:mobile_robot_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/george/mobilerobot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/george/mobilerobot_ws/install -G Unix Makefiles

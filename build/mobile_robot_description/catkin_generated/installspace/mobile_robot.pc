@@ -1,0 +1,8 @@
+prefix=/home/george/mobilerobot_ws/install
+
+Name: mobile_robot
+Description: Description of mobile_robot
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/george/mobilerobot_ws/install/lib 
+Requires: 
