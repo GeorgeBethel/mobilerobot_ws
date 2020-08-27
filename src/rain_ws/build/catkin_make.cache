@@ -1,0 +1,2 @@
+mobile_robot:rain_bot_description:rainbot_gazebo:robot_control:robot_slam:robotics_lab_assembly:scara_link
+-DCATKIN_DEVEL_PREFIX=/home/george/rain_ws/devel -DCMAKE_INSTALL_PREFIX=/home/george/rain_ws/install -G Unix Makefiles

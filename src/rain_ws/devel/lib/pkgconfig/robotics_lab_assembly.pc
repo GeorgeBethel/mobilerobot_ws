@@ -1,0 +1,8 @@
+prefix=/home/george/rain_ws/devel
+
+Name: robotics_lab_assembly
+Description: Description of robotics_lab_assembly
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/george/rain_ws/devel/lib 
+Requires: 

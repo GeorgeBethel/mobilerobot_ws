@@ -1,0 +1,8 @@
+prefix=/home/george/rain_ws/install
+
+Name: rainbot_description
+Description: Description of rainbot_description
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/george/rain_ws/install/lib 
+Requires: 

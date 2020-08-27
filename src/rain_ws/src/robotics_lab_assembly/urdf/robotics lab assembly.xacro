@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+
+<robot
+  name="robotics_lab_assembly" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find rain_bot_description)/urdf/material.xacro"/>
+<xacro:include filename="$(find rain_bot_description)/urdf/rainrobot.gazebo"/>
+
+<link name="world"/>
+  <joint name="fixed" type="fixed">
+	<parent link="world"/>
+	<origin xyz="-3 10 -3" rpy="0 0 0"/>
+	<child link="labwall_link"/>
+  </joint>
+	
+  <link
+    name="labwall_link">
+
+<!--pose>0.16492 2 -0.11 0 .15 0</pose-->
+
+    <inertial>
+      <origin
+        xyz="2.88631727936965 4.25747635574219 9.40519925625033"
+        rpy="0 0 0" />
+      <mass
+        value="15604.4537149813" />
+      <inertia
+        ixx="235708.873540656"
+        ixy="-142.46739159757"
+        ixz="-13176.7939817931"
+        iyy="304111.466166678"
+        iyz="798.553183800239"
+        izz="86001.246194391" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/labwall_link.STL" />
+      </geometry>
+      <material
+        name="green">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/labwall_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="table1_Link">
+    <inertial>
+      <origin
+        xyz="-7.1054E-15 0.0008471 -8.8818E-16"
+        rpy="0 0 0" />
+      <mass
+        value="110.95" />
+      <inertia
+        ixx="15.451"
+        ixy="-2.6735E-13"
+        ixz="-4.3639E-14"
+        iyy="73.608"
+        iyz="-4.9174E-14"
+        izz="60.141" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/table1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/table1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table1_joint"
+    type="fixed">
+    <origin
+      xyz="3.0927 -8.3396 3.8264"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="table1_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table2_Link">
+    <inertial>
+      <origin
+        xyz="3.5527136788005E-15 0.00084709792955362 -4.44089209850063E-16"
+        rpy="0 0 0" />
+      <mass
+        value="110.947709733553" />
+      <inertia
+        ixx="15.4505167930905"
+        ixy="1.3006154698618E-13"
+        ixz="2.15173473656904E-13"
+        iyy="73.6078430722055"
+        iyz="-2.41509843945329E-14"
+        izz="60.1408764721408" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/table2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/table2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table2_joint"
+    type="fixed">
+    <origin
+      xyz="3.0927 -10.78 3.8264"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="table2_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair1_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.107408951834861 -1.77635683940025E-15"
+        rpy="0 0 0" />
+      <mass
+        value="2.71889150082342" />
+      <inertia
+        ixx="0.126346848988852"
+        ixy="-3.93638958086271E-18"
+        ixz="-6.08804930839028E-18"
+        iyy="0.0707879364878601"
+        iyz="4.87134817629601E-17"
+        izz="0.124781438868788" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair1_joint"
+    type="fixed">
+    <origin
+      xyz="2.2071 -11.533 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair1_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair2_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.107408951834861 0.178000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="2.71889150082342" />
+      <inertia
+        ixx="0.126346848988852"
+        ixy="2.24094847008225E-18"
+        ixz="-6.08804930839028E-18"
+        iyy="0.07078793648786"
+        iyz="4.25361437120151E-17"
+        izz="0.124781438868788" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair2_joint"
+    type="fixed">
+    <origin
+      xyz="2.2071 -10.64 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair2_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair3_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.10741 0.178"
+        rpy="0 0 0" />
+      <mass
+        value="2.7189" />
+      <inertia
+        ixx="0.12635"
+        ixy="2.2432E-18"
+        ixz="-4.2352E-18"
+        iyy="0.070788"
+        iyz="5.5156E-17"
+        izz="0.12478" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair3_joint"
+    type="fixed">
+    <origin
+      xyz="2.2071 -9.762 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair3_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair4_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.107408951834861 0.178000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="2.71889150082342" />
+      <inertia
+        ixx="0.126346848988852"
+        ixy="2.02919023326868E-18"
+        ixz="-7.78211520289888E-18"
+        iyy="0.0707879364878601"
+        iyz="4.87134817629601E-17"
+        izz="0.124781438868788" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair4_joint"
+    type="fixed">
+    <origin
+      xyz="2.2071 -9.0968 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair4_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair5_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.107408951834861 0.178000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="2.71889150082342" />
+      <inertia
+        ixx="0.126346848988852"
+        ixy="-4.21932257803606E-19"
+        ixz="-2.5410988417629E-18"
+        iyy="0.0707879364878601"
+        iyz="4.76456032830544E-17"
+        izz="0.124781438868787" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair5_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair5_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair5_joint"
+    type="fixed">
+    <origin
+      xyz="2.2071 -8.2102 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair5_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair6_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.107408951834865 0.177999999999999"
+        rpy="0 0 0" />
+      <mass
+        value="2.71889150082346" />
+      <inertia
+        ixx="0.126346848988856"
+        ixy="-4.48561138265409E-18"
+        ixz="7.94093388050906E-19"
+        iyy="0.0707879364878615"
+        iyz="-8.58364426870582E-18"
+        izz="0.124781438868791" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair6_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair6_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair6_Link"
+    type="fixed">
+    <origin
+      xyz="2.2071 -7.3708 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair6_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair7_Link">
+    <inertial>
+      <origin
+        xyz="4.44089209850063E-16 -0.107408951834867 0.178"
+        rpy="0 0 0" />
+      <mass
+        value="2.71889150082348" />
+      <inertia
+        ixx="0.126346848988859"
+        ixy="6.4098672951903E-16"
+        ixz="3.28225267061043E-18"
+        iyy="0.0707879364878622"
+        iyz="-5.35990621742183E-18"
+        izz="0.124781438868794" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair7_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair7_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair7_joint"
+    type="fixed">
+    <origin
+      xyz="3.9795 -7.3048 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair7_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair8_Link">
+    <inertial>
+      <origin
+        xyz="4.44089209850063E-16 -0.107408951834863 0.178000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="2.71889150082344" />
+      <inertia
+        ixx="0.126346848988854"
+        ixy="6.51385736167016E-16"
+        ixz="-1.43466205441197E-17"
+        iyy="0.0707879364878608"
+        iyz="-4.32187829215364E-17"
+        izz="0.12478143886879" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair8_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair8_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair8_joint"
+    type="fixed">
+    <origin
+      xyz="3.9795 -8.1477 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair8_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair9_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.107408951834863 -1.77635683940025E-15"
+        rpy="0 0 0" />
+      <mass
+        value="2.71889150082345" />
+      <inertia
+        ixx="0.126346848988854"
+        ixy="6.52302919255205E-16"
+        ixz="-1.18584612615602E-17"
+        iyy="0.0707879364878608"
+        iyz="-3.86111132509497E-17"
+        izz="0.12478143886879" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair9_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair9_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair9_Link"
+    type="fixed">
+    <origin
+      xyz="3.9795 -9.2381 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair9_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair10_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.107408951834863 0.178000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="2.71889150082345" />
+      <inertia
+        ixx="0.126346848988854"
+        ixy="6.5161470498556E-16"
+        ixz="-1.43995601033231E-17"
+        iyy="0.0707879364878608"
+        iyz="-4.2661781637921E-17"
+        izz="0.12478143886879" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair10_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair10_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair10_joint"
+    type="fixed">
+    <origin
+      xyz="3.9795 -9.7663 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair10_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair11_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.107408951834862 0.178000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="2.71889150082344" />
+      <inertia
+        ixx="0.126346848988854"
+        ixy="6.47979429786324E-16"
+        ixz="-1.43466205441197E-17"
+        iyy="0.0707879364878608"
+        iyz="-4.02359930144707E-17"
+        izz="0.12478143886879" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair11_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair11_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair11_joint"
+    type="fixed">
+    <origin
+      xyz="3.9795 -10.591 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair11_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="chair12_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.107408951834863 0"
+        rpy="0 0 0" />
+      <mass
+        value="2.71889150082344" />
+      <inertia
+        ixx="0.126346848988854"
+        ixy="6.56671224997396E-16"
+        ixz="-1.35525271560688E-17"
+        iyy="0.0707879364878608"
+        iyz="-4.19115405132357E-17"
+        izz="0.12478143886879" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair12_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/chair12_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chair12_Link"
+    type="fixed">
+    <origin
+      xyz="3.9795 -11.607 3.7014"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="chair12_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="workin_table1_Link">
+    <inertial>
+      <origin
+        xyz="2.4797E-05 -0.2197 -0.00071478"
+        rpy="0 0 0" />
+      <mass
+        value="74.292" />
+      <inertia
+        ixx="6.256"
+        ixy="0.00025307"
+        ixz="-0.00055568"
+        iyy="38.261"
+        iyz="-0.0061956"
+        izz="38.976" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="workin_table1_joint"
+    type="fixed">
+    <origin
+      xyz="0.89992 -7.552 3.7064"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="workin_table1_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="workin_table2_Link">
+    <inertial>
+      <origin
+        xyz="2.4796677250194E-05 -0.219703339302157 -0.000714778193983689"
+        rpy="0 0 0" />
+      <mass
+        value="74.2920077844312" />
+      <inertia
+        ixx="6.25595637818565"
+        ixy="0.000253071580254398"
+        ixz="-0.000555675254690693"
+        iyy="38.261151829434"
+        iyz="-0.00619557594126063"
+        izz="38.9758993557381" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="workin_table2_joint"
+    type="fixed">
+    <origin
+      xyz="0.89992 -9.992 3.7064"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="workin_table2_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="workin_table3_Link">
+    <inertial>
+      <origin
+        xyz="2.47966772484176E-05 -0.219703339302157 -0.000714778193983578"
+        rpy="0 0 0" />
+      <mass
+        value="74.2920077844312" />
+      <inertia
+        ixx="6.25595637818566"
+        ixy="0.000253071580239399"
+        ixz="-0.000555675254673602"
+        iyy="38.261151829434"
+        iyz="-0.00619557594125917"
+        izz="38.9758993557381" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="workin_table3_Link"
+    type="fixed">
+    <origin
+      xyz="0.89992 -12.432 3.7064"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="workin_table3_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="workin_table4_Link">
+    <inertial>
+      <origin
+        xyz="2.47966772537467E-05 -0.219703339302156 -0.000714778193982468"
+        rpy="0 0 0" />
+      <mass
+        value="74.2920077844304" />
+      <inertia
+        ixx="6.25595637818556"
+        ixy="0.00025307158031362"
+        ixz="-0.000555675254739186"
+        iyy="38.2611518294331"
+        iyz="-0.00619557594125833"
+        izz="38.9758993557372" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="workin_table4_joint"
+    type="fixed">
+    <origin
+      xyz="4.2844 -14.262 3.7064"
+      rpy="1.5708 0 0" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="workin_table4_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="workin_table5_Link">
+    <inertial>
+      <origin
+        xyz="2.47966772572994E-05 -0.219703339302157 -0.000714778193984245"
+        rpy="0 0 0" />
+      <mass
+        value="74.2920077844308" />
+      <inertia
+        ixx="6.2559563781856"
+        ixy="0.000253071580324929"
+        ixz="-0.000555675254585145"
+        iyy="38.2611518294336"
+        iyz="-0.00619557594126182"
+        izz="38.9758993557378" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table5_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table5_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="workin_table5_joint"
+    type="fixed">
+    <origin
+      xyz="5.2269 -12.764 3.7064"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="workin_table5_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="workin_table6_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table6_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotics_lab_assembly/meshes/workin_table6_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="workin_table6_joint"
+    type="fixed">
+    <origin
+      xyz="5.2269 -10.324 3.7064"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="labwall_link" />
+    <child
+      link="workin_table6_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+</robot>

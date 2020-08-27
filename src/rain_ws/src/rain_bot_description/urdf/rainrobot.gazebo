@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<robot>
+
+<!--gazebo materials plug-->
+
+<gazebo reference="left_wheel">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="robot_link">
+      <material>Gazebo/Orange</material>
+    </gazebo>
+<gazebo reference="left_wheel1_link">
+      <material>Gazebo/Black</material>
+    </gazebo>
+<gazebo reference="left_wheel2_link">
+      <material>Gazebo/Black</material>
+    </gazebo>
+<gazebo reference="right_wheel1_link">
+      <material>Gazebo/Black</material>
+    </gazebo>
+<gazebo reference="right_wheel2_link">
+      <material>Gazebo/Black</material>
+    </gazebo>
+<gazebo reference="labwall_link">
+      <material>Gazebo/Orange</material>
+    </gazebo>
+<gazebo reference="sensor_Link">
+      <material>Gazebo/Orange</material>
+    </gazebo>
+<gazebo reference="table1_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="table2_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair1_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair2_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair3_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair4_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair5_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair6_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair7_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair8_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair9_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair10_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair11_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="chair12_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+
+<gazebo reference="workin_table1_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="workin_table2_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="workin_table3_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+
+<gazebo reference="workin_table4_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="workin_table5_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<gazebo reference="workin_table6_Link">
+      <material>Gazebo/Green</material>
+    </gazebo>
+<!--gazebo differential drive pluggin -->
+
+<gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <legacyMode>false</legacyMode>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>20</updateRate>
+      <leftJoint>left_wheel2_joint</leftJoint>
+      <rightJoint>right_wheel2_joint</rightJoint>
+      <wheelSeparation>0.4</wheelSeparation>
+      <wheelDiameter>0.1</wheelDiameter>
+      <torque>20</torque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>robot_link</robotBaseFrame>
+    </plugin>
+  </gazebo>
+
+<!-- camera plugin-->
+
+
+<gazebo reference="sensor_Link">
+
+	<material>Gazebo/Orange</material>
+	<sensor type='camera' name="camera1">
+	<update_rate>30.0</update_rate>
+	<camera name="head">
+		<horizontal_fov>1.3962634</horizontal_fov>
+	<image>
+	<width>800</width>
+	<height>800</height>
+	<format>RBGBB</format>
+	</image>
+	<clip>
+	<near>0.02</near>
+	<far>300</far>
+	</clip>
+	</camera>
+
+	<plugin name="camera_controler" filename="libgazebo_ros_camera.so">
+	<alwaysOn>true</alwaysOn>
+	<updateRate>0.0</updateRate>
+	<cameraInfoTopicName>camera_info</cameraInfoTopicName>
+	<cameraName>mobilerobot/camera1</cameraName>
+	<imageInfoTopicName>image_raw</imageInfoTopicName>
+	<frameName>sensor_Link</frameName>
+	<hackBaseline>0.07</hackBaseline>
+	<distortionK1>0.0</distortionK1>
+	<distortionK2>0.0</distortionK2>
+	<distortionK3>0.0</distortionK3>
+	<distortionT1>0.0</distortionT1>
+	<distortionT2>0.0</distortionT2>
+	</plugin>
+	</sensor>
+</gazebo>
+
+
+<!--hukuyo laser sensor-->
+
+  <gazebo reference="hokuyo">
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.570796</min_angle>
+            <max_angle>1.570796</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>30.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/mobile_robot/laser/scan</topicName>
+        <frameName>hokuyo</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>

@@ -1,0 +1,8 @@
+prefix=/home/george/rain_ws/install
+
+Name: scara_link
+Description: Description of scara_link
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/george/rain_ws/install/lib 
+Requires: 

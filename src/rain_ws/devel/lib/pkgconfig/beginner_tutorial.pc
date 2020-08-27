@@ -1,0 +1,8 @@
+prefix=/home/george/rain_ws/devel
+
+Name: beginner_tutorial
+Description: Description of beginner_tutorial
+Version: 0.0.0
+Cflags: -I/home/george/rain_ws/devel/include
+Libs: -L/home/george/rain_ws/devel/lib 
+Requires: 
