@@ -98,6 +98,7 @@
       <updateRate>20</updateRate>
       <leftJoint>left_wheel2_joint</leftJoint>
       <rightJoint>right_wheel2_joint</rightJoint>
+
       <wheelSeparation>0.4</wheelSeparation>
       <wheelDiameter>0.1</wheelDiameter>
       <torque>20</torque>
