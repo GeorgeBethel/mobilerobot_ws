@@ -1,7 +1,7 @@
 # mobilerobot_ws
 Robot simulation with ROS and Gazebo
 
-#for navigation
+#for autonomous navigation
 
 launch the following launch files in other to perform autonomous navaigation folders
 
