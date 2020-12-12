@@ -148,7 +148,7 @@
 </gazebo>
 
 
-<!--hukuyo laser sensor-->
+<!--hokuyo laser sensor-->
 
   <gazebo reference="hokuyo">
     <sensor type="ray" name="head_hokuyo_sensor">
