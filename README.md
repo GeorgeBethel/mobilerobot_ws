@@ -5,7 +5,11 @@ Robot simulation with ROS and Gazebo. Robot model was designed on solidworks and
 
 1.roslaunch rain_bot_description gazebo_world.launch
 
-2.roslaunch robot_slam robot_gmapping.launch
+2.roslaunch robot_slam robot_slam_gmapping.launch
 
-3.roslaunch robot_control turtlebot_teleop.launch
+3.roslaunch robot_slam gmapping.launch
+
+4.roslaunch robot_control turtlebot_teleop.launch
+
+5.rosrun map_server map_saver -f "file_path_to_save_yaml_file/map_name.yaml"
  
