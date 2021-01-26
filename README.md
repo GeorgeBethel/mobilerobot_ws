@@ -12,6 +12,10 @@ Robot simulation with ROS and Gazebo. Robot model was designed on solidworks and
 4.roslaunch robot_control turtlebot_teleop.launch
 
 5.rosrun map_server map_saver -f "file_path_to_save_yaml_file/map_name.yaml"
+
+# Robot URDF
+
+![alt created](https://github.com/GeorgeBethel/mobilerobot_ws/blob/master/src/rain_ws/pictures/custom%20urdf%20model1.png)
  
  #  During map creation
  
