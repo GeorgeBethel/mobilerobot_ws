@@ -18,6 +18,6 @@ Robot simulation with ROS and Gazebo. Robot model was designed on solidworks and
 ![alt map creation](https://github.com/GeorgeBethel/mobilerobot_ws/blob/master/src/rain_ws/pictures/SLAM_gmapping.png)
 
 
-#Created map
+# Created map
 
 ![alt map creation](https://github.com/GeorgeBethel/mobilerobot_ws/blob/master/src/rain_ws/pictures/map_generated.png)
