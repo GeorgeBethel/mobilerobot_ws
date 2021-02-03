@@ -89,6 +89,8 @@
 <gazebo reference="workin_table6_Link">
       <material>Gazebo/Green</material>
     </gazebo>
+
+
 <!--gazebo differential drive pluggin -->
 
 <gazebo>
@@ -122,7 +124,7 @@
 	<image>
 	<width>800</width>
 	<height>800</height>
-	<format>RBGBB</format>
+	<format>R8G8B8</format>
 	</image>
 	<clip>
 	<near>0.02</near>
@@ -180,7 +182,7 @@
         </noise>
       </ray>
       <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
-        <topicName>/mobile_robot/laser/scan</topicName>
+        <topicName>/scan</topicName>
         <frameName>hokuyo</frameName>
       </plugin>
     </sensor>

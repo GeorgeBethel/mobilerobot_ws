@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="algo6_bot">
+<link name="world"/>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.200001512178053 0.241852211356269 -0.0225098451215039"
+        rpy="0 0 0" />
+      <mass
+        value="1.62971419738771" />
+      <inertia
+        ixx="0.0827115360073378"
+        ixy="9.73763421212959E-07"
+        ixz="-9.00633062514957E-08"
+        iyy="0.0362273244859443"
+        iyz="0.000299055764514098"
+        izz="0.111939320851762" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_wheelR_link">
+    <inertial>
+      <origin
+        xyz="0.43092 5.7902E-08 2.2629E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.5702" />
+      <inertia
+        ixx="0.01072"
+        ixy="3.7954E-08"
+        ixz="6.247E-09"
+        iyy="0.0056085"
+        iyz="-1.4266E-08"
+        izz="0.0056083" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/front_wheelR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/front_wheelR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_wheelR_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.5"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_wheelR_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_wheelL_link">
+    <inertial>
+      <origin
+        xyz="0.430921320844651 5.79020018598442E-08 2.26289091623892E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.57018655061563" />
+      <inertia
+        ixx="0.0107199439893528"
+        ixy="3.79535822746064E-08"
+        ixz="6.24698917361356E-09"
+        iyy="0.00560851970839014"
+        iyz="-1.42662595837644E-08"
+        izz="0.00560831004132884" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/front_wheelL_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/front_wheelL_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_wheelL_joint"
+    type="revolute">
+    <origin
+      xyz="0.4 0 0.5"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_wheelL_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_wheelR_link">
+    <inertial>
+      <origin
+        xyz="0.430921320886506 5.79020216028264E-08 2.2513866549201E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.57018656673181" />
+      <inertia
+        ixx="0.0107199441880378"
+        ixy="3.79702776290324E-08"
+        ixz="6.25435598561781E-09"
+        iyy="0.00560851992090271"
+        iyz="-1.42662598964045E-08"
+        izz="0.00560831005920041" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/back_wheelR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/back_wheelR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_wheelR_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.228 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_wheelR_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_wheelL_link">
+    <inertial>
+      <origin
+        xyz="0.430921320844651 5.7902019392184E-08 2.26289091397043E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.57018655061564" />
+      <inertia
+        ixx="0.0107199439893528"
+        ixy="3.79535822722803E-08"
+        ixz="6.24698917663655E-09"
+        iyy="0.00560851970839018"
+        iyz="-1.42662596040544E-08"
+        izz="0.00560831004132886" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/back_wheelL_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/back_wheelL_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_wheelL_joint"
+    type="revolute">
+    <origin
+      xyz="0.4 0 0"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_wheelL_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="platform_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/platform_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/platform_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="platform_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.02 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="platform_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="-1.44311769415262E-05 -3.95733034478929E-05 0.225986579401347"
+        rpy="0 0 0" />
+      <mass
+        value="0.0626087319921524" />
+      <inertia
+        ixx="1.73287909876757E-05"
+        ixy="1.11976874535981E-06"
+        ixz="-2.85418842077003E-10"
+        iyy="1.85076730925539E-05"
+        iyz="-8.49249735471805E-10"
+        izz="3.10067655835034E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.2 0.451 -0.085"
+      rpy="0 0 3.1416" />
+    <parent
+      link="platform_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="robot_arm_base_link">
+    <inertial>
+      <origin
+        xyz="-0.032307829842947 -0.0782281348686356 0.198084927755953"
+        rpy="0 0 0" />
+      <mass
+        value="0.647775516079259" />
+      <inertia
+        ixx="0.00123935539869003"
+        ixy="1.10931426285115E-08"
+        ixz="-6.46709576300254E-09"
+        iyy="0.00108876898407285"
+        iyz="1.24433249926633E-05"
+        izz="0.00059753096939592" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/robot_arm_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/robot_arm_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot_arm_base_joint"
+    type="fixed">
+    <origin
+      xyz="0.12246 0.28231 -0.05"
+      rpy="0 0 1.5708" />
+    <parent
+      link="platform_link" />
+    <child
+      link="robot_arm_base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="robot_arm_link1">
+    <inertial>
+      <origin
+        xyz="-0.152990690369013 -0.130949758510278 0.230331223634345"
+        rpy="0 0 0" />
+      <mass
+        value="0.573239091567049" />
+      <inertia
+        ixx="0.000341763950181962"
+        ixy="0.000527229762397376"
+        ixz="-1.00040919870657E-08"
+        iyy="0.0106532118617114"
+        iyz="1.34984900371454E-09"
+        izz="0.0106789128711268" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/robot_arm_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/robot_arm_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot_arm_link1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.2331 0 0.10564"
+      rpy="0 0.851 0" />
+    <parent
+      link="robot_arm_base_link" />
+    <child
+      link="robot_arm_link1" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="robot_arm_link2">
+    <inertial>
+      <origin
+        xyz="-1.10280193052099 -0.05999538346491 -0.518612577309713"
+        rpy="0 0 0" />
+      <mass
+        value="0.599895947397101" />
+      <inertia
+        ixx="0.000502604552655828"
+        ixy="-0.000606376669837302"
+        ixz="2.01562179111823E-07"
+        iyy="0.00742460590373101"
+        iyz="2.59824548473619E-08"
+        izz="0.00763699028242569" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/robot_arm_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/robot_arm_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot_arm_link2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.81392 0 1.4339"
+      rpy="-0.17027 -1.5708 0.1713" />
+    <parent
+      link="robot_arm_link1" />
+    <child
+      link="robot_arm_link2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="robot_arm_link3">
+    <inertial>
+      <origin
+        xyz="0.829667891947315 -0.0931815081581417 2.29119222919717"
+        rpy="0 0 0" />
+      <mass
+        value="0.231316775852319" />
+      <inertia
+        ixx="0.00022997720676195"
+        ixy="6.72354827063439E-11"
+        ixz="1.2756844953421E-10"
+        iyy="0.000191660644842524"
+        iyz="2.12181011880653E-05"
+        izz="0.000119127278624079" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/robot_arm_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/robot_arm_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot_arm_link3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.92471 0 1.9056"
+      rpy="3.1416 0.34202 3.1416" />
+    <parent
+      link="robot_arm_link2" />
+    <child
+      link="robot_arm_link3" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="robot_arm_link4">
+    <inertial>
+      <origin
+        xyz="0.0748615885982825 -0.526342838036394 2.76056312212884"
+        rpy="0 0 0" />
+      <mass
+        value="0.155314854617675" />
+      <inertia
+        ixx="9.7408494664753E-05"
+        ixy="-9.93658607956175E-06"
+        ixz="1.8038140532317E-05"
+        iyy="7.65614151543568E-05"
+        iyz="1.11582318166315E-05"
+        izz="9.32328235093548E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/robot_arm_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/robot_arm_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robot_arm_link4_joint"
+    type="revolute">
+    <origin
+      xyz="-1.0917 -0.49582 0.37304"
+      rpy="0 0.7278 0.46994" />
+    <parent
+      link="robot_arm_link3" />
+    <child
+      link="robot_arm_link4" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="End_effector_link">
+    <inertial>
+      <origin
+        xyz="-0.236189626357559 -0.0989956688234041 0.671666792539085"
+        rpy="0 0 0" />
+      <mass
+        value="0.0251557542631449" />
+      <inertia
+        ixx="5.1902537461543E-06"
+        ixy="5.11669125379852E-07"
+        ixz="2.44548653157685E-07"
+        iyy="7.01172848209814E-06"
+        iyz="9.34436430016979E-07"
+        izz="5.50295987865364E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/End_effector_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://algo6_bot/meshes/End_effector_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="End_effector_link_joint"
+    type="revolute">
+    <origin
+      xyz="-0.16652 -0.71205 3.4332"
+      rpy="2.7103 -0.06143 2.9093" />
+    <parent
+      link="robot_arm_link4" />
+    <child
+      link="End_effector_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+<joint name="world_base" type="fixed">
+
+	 <origin
+      xyz="0 0 0.5"
+      rpy="-1.5 0 0" />
+
+	<parent link="world"/>
+	<child link="base_link"/>
+
+	<axis
+      xyz="0 1 0" />
+</joint>
+</robot>

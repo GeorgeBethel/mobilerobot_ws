@@ -1,16 +1,6 @@
 <?xml version="1.0"?>
 <launch>
 
-<master auto="start"/>
-
-  <!-- Map server -->
-  <arg name="map_file" default="$(find robot_slam)/maps/house_map.yaml"/>
-  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
-
-  <!-- Place map frame at odometry frame -->
-  <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster"
-      args="0 0 0 0 0 0 map odom 100"/>
-
 
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find mobile_robot)/urdf/mobile_robot.xacro'"/>
 
@@ -19,13 +9,25 @@
     <param name="use_gui" value="False"/>
   </node>
 
+
+<!-- Map server -->
+  <arg name="map_file" default="$(find robot_slam)/maps/house_map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- Place map frame at odometry frame>
+  <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster"
+      args="0 0 0 0 0 0 map odom 100"/-->
+
+
 <include file="$(find robot_slam)/launch/amcl.launch"/>
+
+<!--include file="$(find robot_slam)/launch/move_base.launch"/-->
 
   <!-- Combine joint values -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
 
   <!-- Show in Rviz   -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rain_bot_description)/rviz/amcl.rviz"/>
+  <!--node name="rviz" pkg="rviz" type="rviz" args="-d $(find rain_bot_description)/rviz/amcl.rviz"/-->
 
 <!--node name="rviz" pkg="rviz" type="rviz"/-->
 

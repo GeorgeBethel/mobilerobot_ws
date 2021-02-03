@@ -1,0 +1,66 @@
+<robot name="simple_box">
+
+  <link name="my_box">
+    <inertial>
+      <origin
+        xyz="0.082699 -0.15 0"
+        rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
+    </inertial>
+    <visual>
+      <origin xyz="2 0 1"/>
+      <geometry>
+        <box size="1 1 2" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="2 0 1"/>
+      <geometry>
+        <box size="1 1 2" />
+      </geometry>
+    </collision>
+  </link>
+
+<link name="my_box1">
+    <inertial>
+      <origin xyz="10 0 0" />
+      <mass value="1.0" />
+      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
+    </inertial>
+    <visual>
+      <origin xyz="2 0 1"/>
+      <geometry>
+        <box size="1 1 2" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="2 0 1"/>
+      <geometry>
+        <box size="1 1 2" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <gazebo reference="my_box">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+<joint
+    name="left_wheel1_joint"
+    type="fixed">
+    <origin
+      xyz="0.04 -0.10 0.12"
+      rpy="0 0 1" />
+    <parent
+      link="my_box" />
+    <child
+      link="my_box1" />
+    <axis
+      xyz="0 0 1" />
+</joint>
+<gazebo reference="my_box1">
+    <material>Gazebo/Green</material>
+  </gazebo>
+</robot>
