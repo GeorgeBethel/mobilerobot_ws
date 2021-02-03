@@ -1,1 +1,0 @@
-controller_joint_names: ['', 'front_wheelR_joint', 'front_wheelL_joint', 'back_wheelR_joint', 'back_wheelL_joint', 'robot_arm_link1_joint', 'robot_arm_link2_joint', 'robot_arm_link3_joint', 'robot_arm_link4_joint', 'End_effector_link_joint', ]
